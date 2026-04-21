@@ -7,7 +7,7 @@ Route::inertia('/', 'Welcome', [
     'canRegister' => Features::enabled(Features::registration()),
 ])->name('home');
 
-Route::inertia('cicd-test', 'CiCdTest')->name('cicd-test');
+Route::inertia('test', 'CiCdTest')->name('cicd-test');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'Dashboard')->name('dashboard');
